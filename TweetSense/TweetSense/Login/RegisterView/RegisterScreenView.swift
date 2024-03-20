@@ -50,7 +50,7 @@ struct RegisterScreenView: View {
     .simpleToast(isPresented: $viewModel.showToast, options: toastOptions) {
       Label(viewModel.toastMessage, systemImage: "exclamationmark.triangle")
       .padding()
-      .background(Color("PrimaryColor").opacity(0.8))
+      .background(Color("PrimaryColor"))
       .foregroundColor(Color.white)
       .cornerRadius(10)
       .padding(.top)
