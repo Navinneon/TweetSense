@@ -54,4 +54,31 @@ struct CommonTextfield: View {
       .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
   }
 }
+
+struct SecureTextfield: View {
+  @Binding var text: String
+  var title: String
   
+  var body: some View {
+    SecureField(title, text: $text)
+      .font(.title3)
+      .padding()
+      .frame(maxWidth: .infinity)
+      .background(Color.white)
+      .cornerRadius(50.0)
+      .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
+  }
+}
+  
+struct ToastView: View {
+  var toastMessage: String
+  
+  var body: some View {
+    Label(toastMessage, systemImage: "exclamationmark.triangle")
+      .padding()
+      .background(Color("PrimaryColor"))
+      .foregroundColor(Color.white)
+      .cornerRadius(10)
+      .padding(.top)
+  }
+}

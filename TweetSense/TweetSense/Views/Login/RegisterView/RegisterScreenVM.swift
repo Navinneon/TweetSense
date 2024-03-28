@@ -15,6 +15,7 @@ class RegisterScreenVM: ObservableObject {
   @Published var confirmPassword: String = ""
   @Published var showToast: Bool = false
   @Published var toastMessage: String = ""
+  @Published var isRegistered: Bool = false
   
   func isValidEmail(_ email: String) -> Bool {
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -33,17 +34,21 @@ class RegisterScreenVM: ObservableObject {
     } else if !isValidPassword(password) {
       toastMessage = "Please enter a valid password"
     } else if password != confirmPassword {
-      toastMessage = "Please enter the confirmPassword correctly"
+      toastMessage = "Please enter the confirm password correctly"
     } else {
       Auth.auth().createUser(withEmail: email, password: password) { [self] authResult, error in
         if let error = error {
           toastMessage = "Error creating user: \(error.localizedDescription)"
           print(toastMessage)
-        } else if let _ = authResult {
-          toastMessage = "User created successfully"
-          print(toastMessage)
+        } else if let result = authResult {
+          if let token = result.user.refreshToken {
+            DataManager.shared.saveToken(token)
+            print(token)
+            isRegistered = true
+          }
         }
       }
+      return
     }
     showToast = true
   }

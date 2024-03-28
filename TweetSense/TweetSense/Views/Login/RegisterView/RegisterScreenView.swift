@@ -30,8 +30,8 @@ struct RegisterScreenView: View {
             .padding(.bottom, 30)
           
           CommonTextfield(text: $viewModel.email, title: "Email")
-          CommonTextfield(text: $viewModel.password, title: "Password")
-          CommonTextfield(text: $viewModel.confirmPassword, title: "Confirm Password")
+          SecureTextfield(text: $viewModel.password, title: "Password")
+          SecureTextfield(text: $viewModel.confirmPassword, title: "Confirm Password")
           PrimaryButton(title: "Register") {
             viewModel.createUserAndSetToastMessage(email: viewModel.email, password: viewModel.password)
           }
@@ -48,13 +48,11 @@ struct RegisterScreenView: View {
       .padding()
     }
     .simpleToast(isPresented: $viewModel.showToast, options: toastOptions) {
-      Label(viewModel.toastMessage, systemImage: "exclamationmark.triangle")
-      .padding()
-      .background(Color("PrimaryColor"))
-      .foregroundColor(Color.white)
-      .cornerRadius(10)
-      .padding(.top)
-  }
+      ToastView(toastMessage: viewModel.toastMessage)
+    }
+    NavigationLink("", destination: HomeView(), isActive: $viewModel.isRegistered)
+      .hidden()
+      .foregroundColor(Color("PrimaryColor"))
   }
 }
 
