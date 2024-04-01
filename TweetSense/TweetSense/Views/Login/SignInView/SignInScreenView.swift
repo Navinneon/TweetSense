@@ -19,41 +19,54 @@ struct SignInScreenView: View {
   }
   
   var body: some View {
+    mainView
+      .simpleToast(isPresented: $viewModel.showToast, options: toastOptions) {
+        ToastView(toastMessage: viewModel.toastMessage)
+      }
+    NavigationLink("", destination: HomeView(), isActive: $viewModel.isSignIn)
+      .hidden()
+      .foregroundColor(Color("PrimaryColor"))
+  }
+  
+  private var mainView: some View {
     ZStack {
       Color("BgColor").edgesIgnoringSafeArea(.all)
       VStack {
         Spacer()
-        
-        VStack {
-          Text("Sign In")
-            .font(.largeTitle)
-            .fontWeight(.bold)
-            .padding(.bottom, 30)
-          
-          CommonTextfield(text: $viewModel.email, title: "Email")
-          SecureTextfield(text: $viewModel.password, title: "Password")
-          PrimaryButton(title: "SignIn") {
-            viewModel.signInUserAndSetToastMessage(email: viewModel.email, password: viewModel.password)
-          }
-          .padding(.top, 40)
-        }
+        signInView
         Spacer()
         Divider()
         Spacer()
-        Text("You are completely safe.")
-        Text("Read our Terms & Conditions.")
-          .foregroundColor(Color("PrimaryColor"))
+        bottomView
         Spacer()
         
       }
       .padding()
     }
-    .simpleToast(isPresented: $viewModel.showToast, options: toastOptions) {
-      ToastView(toastMessage: viewModel.toastMessage)
+  }
+  
+  private var signInView: some View {
+    VStack {
+      Text("Sign In")
+        .font(.largeTitle)
+        .fontWeight(.bold)
+        .padding(.bottom, 30)
+      
+      CommonTextfield(text: $viewModel.email, title: "Email")
+      SecureTextfield(text: $viewModel.password, title: "Password")
+      PrimaryButton(title: "SignIn") {
+        viewModel.signInUserAndSetToastMessage(email: viewModel.email, password: viewModel.password)
+      }
+      .padding(.top, 40)
     }
-    NavigationLink("", destination: HomeView(), isActive: $viewModel.isSignIn)
-      .hidden()
-      .foregroundColor(Color("PrimaryColor"))
+  }
+  
+  private var bottomView: some View {
+    VStack {
+      Text("You are completely safe.")
+      Text("Read our Terms & Conditions.")
+        .foregroundColor(Color("PrimaryColor"))
+    }
   }
 }
 

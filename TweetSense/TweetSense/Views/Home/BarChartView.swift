@@ -8,12 +8,6 @@
 import SwiftUI
 import Charts
 
-struct BarChartViewData {
-    let sentiment: String
-    let count: Int
-    let color: Color
-}
-
 struct BarChartView: View {
     let data: [BarChartViewData]
     

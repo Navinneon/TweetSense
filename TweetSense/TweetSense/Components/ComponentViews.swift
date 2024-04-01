@@ -40,6 +40,24 @@ struct SecondaryButton: View {
   }
 }
 
+struct NoDataButton: View {
+  var title: String
+  
+  var body: some View {
+    Text(title)
+      .font(.headline)
+      .fontWeight(.bold)
+      .foregroundColor(.gray)
+      .padding()
+      .frame(maxWidth: .infinity)
+      .cornerRadius(50.0)
+      .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
+      .background(Color.clear)
+      .foregroundStyle(.black)
+  }
+}
+
+
 struct CommonTextfield: View {
   @Binding var text: String
   var title: String

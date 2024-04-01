@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct WelcomeScreenView: View {
+  
   var body: some View {
+    mainView
+  }
+  
+  private var mainView: some View {
     NavigationView {
       ZStack {
         Color("BgColor").edgesIgnoringSafeArea(.all)
         VStack {
-          Spacer()
           Image(uiImage: #imageLiteral(resourceName: "onboard"))
           Spacer()
           PrimaryButton(title: "Welcome To TweetSense", action: {})
-          navigationSignInView()
-          navigationRegisterView()
-          bottomView()
+          navigationSignInView
+          navigationRegisterView
+          bottomView
         }
       }
       .padding()
     }
   }
   
-  func navigationSignInView() -> some View {
+  private var navigationSignInView: some View {
     NavigationLink(
       destination: SignInScreenView(),
       label: {
@@ -34,7 +38,7 @@ struct WelcomeScreenView: View {
       })
   }
   
-  func navigationRegisterView() -> some View {
+  private var navigationRegisterView: some View {
     NavigationLink(
       destination: RegisterScreenView(),
       label: {
@@ -42,7 +46,7 @@ struct WelcomeScreenView: View {
       })
   }
   
-  func bottomView() -> some View {
+  private var bottomView: some View {
     HStack {
       Text("New around here? ")
       NavigationLink(destination: RegisterScreenView()) {

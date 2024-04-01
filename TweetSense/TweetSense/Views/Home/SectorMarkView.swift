@@ -8,11 +8,6 @@
 import SwiftUI
 import Charts
 
-struct PieChartData {
-    let sentiment: String
-    let count: Int
-}
-
 struct PieChartView: View {
   let data: [PieChartData]
    

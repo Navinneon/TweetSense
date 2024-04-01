@@ -1,11 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "onboard.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "onboard.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },

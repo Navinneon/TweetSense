@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE007A682BBB16620032201A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE007A672BBB16620032201A /* HomeModel.swift */; };
+		DE007A6A2BBB214E0032201A /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DE007A692BBB214E0032201A /* TweetSentimentClassifier.mlmodel */; };
 		DE4571D62BB9923000FFFF93 /* apple.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE4571D52BB9923000FFFF93 /* apple.csv */; };
 		DE4571D82BB9A64600FFFF93 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571D72BB9A64600FFFF93 /* BarChartView.swift */; };
 		DE4571DC2BB9ACD800FFFF93 /* SectorMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571DB2BB9ACD800FFFF93 /* SectorMarkView.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE007A672BBB16620032201A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		DE007A692BBB214E0032201A /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		DE4571D52BB9923000FFFF93 /* apple.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apple.csv; sourceTree = "<group>"; };
 		DE4571D72BB9A64600FFFF93 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		DE4571DB2BB9ACD800FFFF93 /* SectorMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorMarkView.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			children = (
 				DE956EB72BB5D83D00BEF38F /* HomeView.swift */,
 				DE4571DD2BB9C28E00FFFF93 /* HomeViewModel.swift */,
+				DE007A672BBB16620032201A /* HomeModel.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 		DEFEFB7C2BA064B100959061 /* TweetSense */ = {
 			isa = PBXGroup;
 			children = (
+				DE007A692BBB214E0032201A /* TweetSentimentClassifier.mlmodel */,
 				DEFEFB7D2BA064B100959061 /* TweetSenseApp.swift */,
 				DE956EBD2BB5DB6D00BEF38F /* ContentView.swift */,
 				DE956EB92BB5D91100BEF38F /* Views */,
@@ -383,10 +389,12 @@
 				DE956EB42BB5A58900BEF38F /* SignInScreenVM.swift in Sources */,
 				DEFEFBA82BA0691D00959061 /* WelcomeScreenView.swift in Sources */,
 				DE4571DC2BB9ACD800FFFF93 /* SectorMarkView.swift in Sources */,
+				DE007A6A2BBB214E0032201A /* TweetSentimentClassifier.mlmodel in Sources */,
 				DE956EBC2BB5D94700BEF38F /* UserDefaults.swift in Sources */,
 				DE956EBE2BB5DB6D00BEF38F /* ContentView.swift in Sources */,
 				DE4571DE2BB9C28E00FFFF93 /* HomeViewModel.swift in Sources */,
 				DEFEFB7E2BA064B100959061 /* TweetSenseApp.swift in Sources */,
+				DE007A682BBB16620032201A /* HomeModel.swift in Sources */,
 				DEFEFBAE2BA0756A00959061 /* ComponentViews.swift in Sources */,
 				DEFEFBB02BA0773800959061 /* RegisterScreenView.swift in Sources */,
 				DE4571D82BB9A64600FFFF93 /* BarChartView.swift in Sources */,

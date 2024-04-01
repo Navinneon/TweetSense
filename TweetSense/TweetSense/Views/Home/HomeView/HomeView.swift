@@ -7,97 +7,109 @@
 
 import SwiftUI
 
-struct Tweet: Identifiable {
-    let id = UUID()
-    let text: String
-}
-
 struct HomeView: View {
-
-  @State private var tweets: [Tweet] = []
-  @State private var searchText = ""
-  @State private var isSearchButtonClicked = false
-  let barChartData: [BarChartViewData] = [
-    BarChartViewData(sentiment: "Positive", count: 10, color: .red),
-    BarChartViewData(sentiment: "Negative", count: 5, color: .blue),
-    BarChartViewData(sentiment: "Neutral", count: 8, color: .green)
- ]
   
-  var filteredTweets: [Tweet] {
-    if searchText.isEmpty {
-      return []
-    } else {
-      return tweets.filter { $0.text.localizedCaseInsensitiveContains(searchText) }
-    }
+  @StateObject var viewModel: HomeViewModel
+  
+  init() {
+    _viewModel = .init(wrappedValue: .init())
   }
   
   var body: some View {
+    mainView
+      .background(Color("BgColor"))
+      .onAppear {
+        viewModel.loadTweetsFromCSV()
+      }
+  }
+  
+  private var mainView: some View {
     VStack {
-      // Search bar
-      HStack {
-        TextField("Search", text: $searchText)
-          .textFieldStyle(RoundedBorderTextFieldStyle())
-          .onChange(of: searchText) { newValue in
-            isSearchButtonClicked = false
-          }
-        Button(action: {
-          isSearchButtonClicked = true
-        }) {
-          Text("Search")
-        }
-      }
-      .padding()
-      
-      if isSearchButtonClicked {
-        mainView()
-      } else {
-        EmptyView()
-      }
-      
+      searchBar
+        .padding()
+      searchBtnClicked
       Spacer()
     }
-    .onAppear {
-      loadTweetsFromCSV()
-    }
-    .background(Color("BgColor"))
   }
   
-  func mainView() -> some View {
-    VStack(spacing: 20) {
-      List(filteredTweets) { tweet in
+  private var searchBar: some View {
+    HStack {
+      TextField("Search", text: $viewModel.searchText)
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+        .onChange(of: viewModel.searchText) { newValue in
+          viewModel.isSearchButtonClicked = false
+        }
+      Button(action: {
+        viewModel.isSearchButtonClicked = true
+        if viewModel.isSearchButtonClicked
+            && !viewModel.searchText.isEmpty
+            && !viewModel.filteredTweets.isEmpty{
+          viewModel.classifyTweets()
+        }
+      }) {
+        Text("Sentiment")
+          .foregroundStyle(.selection)
+      }
+    }
+  }
+  
+  private var searchBtnClicked: some View {
+    if viewModel.isSearchButtonClicked
+        && !viewModel.searchText.isEmpty
+        && !viewModel.filteredTweets.isEmpty {
+      AnyView(listView)
+    } else {
+      AnyView(noDataView)
+    }
+  }
+  
+  private var listView: some View {
+    VStack(spacing: 10) {
+      List(viewModel.filteredTweets) { tweet in
         Text(tweet.text)
       }
-      HStack(spacing: 20) {
-        BarChartView(data: barChartData)
+      
+      ScrollView(.horizontal) {
+        HStack(alignment: .center, spacing: 10) {
+          GeometryReader { geometry in
+            BarChartView(data: viewModel.barChartData)
+              .frame(width: UIScreen.main.bounds.width)
+          }
+          .frame(width: UIScreen.main.bounds.width)
+           
+          Divider()
+          
+          GeometryReader { geometry in
+            PieChartView(data: viewModel.pieChartData)
+              .frame(width: UIScreen.main.bounds.width)
+          }
+          .frame(width: UIScreen.main.bounds.width)
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(8)
       }
     }
   }
+
   
-  func loadTweetsFromCSV() {
-    if let csvPath = Bundle.main.path(forResource: "apple", ofType: "csv") {
-      do {
-        let csvData = try String(contentsOfFile: csvPath, encoding: .utf8)
-        let rows = csvData.components(separatedBy: .newlines)
-        
-        // Parse each row and extract tweet text
-        for row in rows {
-          let columns = row.components(separatedBy: ",")
-          if columns.count >= 2 {
-            let tweet = Tweet(text: columns[1])
-            tweets.append(tweet)
-          }
-        }
-      } catch {
-        print("Error reading CSV file:", error.localizedDescription)
-      }
-    } else {
-      print("CSV file not found.")
+  private var noDataView: some View {
+    VStack(spacing: 20) {
+      Spacer()
+      Image(uiImage: #imageLiteral(resourceName: "noData"))
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .frame(width: 75, height: 75) // Set a fixed size for the image
+      NoDataButton(title: "No Available Data")
+      Spacer()
     }
+    .padding(20)
+    .cornerRadius(10)
   }
 }
 
 struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
+  static var previews: some View {
+    HomeView()
+  }
 }
