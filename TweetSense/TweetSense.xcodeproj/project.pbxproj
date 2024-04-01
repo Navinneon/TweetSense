@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE4571D62BB9923000FFFF93 /* apple.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE4571D52BB9923000FFFF93 /* apple.csv */; };
+		DE4571D82BB9A64600FFFF93 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571D72BB9A64600FFFF93 /* BarChartView.swift */; };
+		DE4571DC2BB9ACD800FFFF93 /* SectorMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571DB2BB9ACD800FFFF93 /* SectorMarkView.swift */; };
+		DE4571DE2BB9C28E00FFFF93 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571DD2BB9C28E00FFFF93 /* HomeViewModel.swift */; };
 		DE956EB42BB5A58900BEF38F /* SignInScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE956EB32BB5A58900BEF38F /* SignInScreenVM.swift */; };
 		DE956EB82BB5D83D00BEF38F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE956EB72BB5D83D00BEF38F /* HomeView.swift */; };
 		DE956EBC2BB5D94700BEF38F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE956EBB2BB5D94700BEF38F /* UserDefaults.swift */; };
@@ -46,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE4571D52BB9923000FFFF93 /* apple.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apple.csv; sourceTree = "<group>"; };
+		DE4571D72BB9A64600FFFF93 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		DE4571DB2BB9ACD800FFFF93 /* SectorMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorMarkView.swift; sourceTree = "<group>"; };
+		DE4571DD2BB9C28E00FFFF93 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DE956EB32BB5A58900BEF38F /* SignInScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenVM.swift; sourceTree = "<group>"; };
 		DE956EB72BB5D83D00BEF38F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DE956EBB2BB5D94700BEF38F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -95,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE4571E02BB9C2A900FFFF93 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				DE956EB72BB5D83D00BEF38F /* HomeView.swift */,
+				DE4571DD2BB9C28E00FFFF93 /* HomeViewModel.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		DE956EB52BB5CA1800BEF38F /* SignInView */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +124,9 @@
 		DE956EB62BB5D81B00BEF38F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DE956EB72BB5D83D00BEF38F /* HomeView.swift */,
+				DE4571E02BB9C2A900FFFF93 /* HomeView */,
+				DE4571D72BB9A64600FFFF93 /* BarChartView.swift */,
+				DE4571DB2BB9ACD800FFFF93 /* SectorMarkView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -168,6 +187,7 @@
 				DE956EBA2BB5D92D00BEF38F /* UserDefaults */,
 				DEFEFB812BA064B400959061 /* Assets */,
 				DEEB67F12BAB4C300052A0EC /* GoogleService-Info.plist */,
+				DE4571D52BB9923000FFFF93 /* apple.csv */,
 				DEFEFB832BA064B400959061 /* Preview Content */,
 			);
 			path = TweetSense;
@@ -330,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEFEFB852BA064B400959061 /* Preview Assets.xcassets in Resources */,
+				DE4571D62BB9923000FFFF93 /* apple.csv in Resources */,
 				DEFEFB822BA064B400959061 /* Assets in Resources */,
 				DEEB67F22BAB4C300052A0EC /* GoogleService-Info.plist in Resources */,
 			);
@@ -361,11 +382,14 @@
 				DEFEFBAA2BA0695400959061 /* SignInScreenView.swift in Sources */,
 				DE956EB42BB5A58900BEF38F /* SignInScreenVM.swift in Sources */,
 				DEFEFBA82BA0691D00959061 /* WelcomeScreenView.swift in Sources */,
+				DE4571DC2BB9ACD800FFFF93 /* SectorMarkView.swift in Sources */,
 				DE956EBC2BB5D94700BEF38F /* UserDefaults.swift in Sources */,
 				DE956EBE2BB5DB6D00BEF38F /* ContentView.swift in Sources */,
+				DE4571DE2BB9C28E00FFFF93 /* HomeViewModel.swift in Sources */,
 				DEFEFB7E2BA064B100959061 /* TweetSenseApp.swift in Sources */,
 				DEFEFBAE2BA0756A00959061 /* ComponentViews.swift in Sources */,
 				DEFEFBB02BA0773800959061 /* RegisterScreenView.swift in Sources */,
+				DE4571D82BB9A64600FFFF93 /* BarChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

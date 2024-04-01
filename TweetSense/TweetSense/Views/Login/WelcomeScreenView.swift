@@ -17,31 +17,40 @@ struct WelcomeScreenView: View {
           Image(uiImage: #imageLiteral(resourceName: "onboard"))
           Spacer()
           PrimaryButton(title: "Welcome To TweetSense", action: {})
-          
-          NavigationLink(
-            destination: SignInScreenView(),
-            label: {
-              SecondaryButton(title: "SignIn")
-            })
-          
-          NavigationLink(
-            destination: RegisterScreenView(),
-            label: {
-              SecondaryButton(title: "Register")
-            })
-          
-          HStack {
-            Text("New around here? ")
-            NavigationLink(destination: RegisterScreenView()) {
-              Text("Register")
-            }
-            .foregroundColor(Color("PrimaryColor"))
-          }
-          .padding()
+          navigationSignInView()
+          navigationRegisterView()
+          bottomView()
         }
       }
       .padding()
     }
+  }
+  
+  func navigationSignInView() -> some View {
+    NavigationLink(
+      destination: SignInScreenView(),
+      label: {
+        SecondaryButton(title: "SignIn")
+      })
+  }
+  
+  func navigationRegisterView() -> some View {
+    NavigationLink(
+      destination: RegisterScreenView(),
+      label: {
+        SecondaryButton(title: "Register")
+      })
+  }
+  
+  func bottomView() -> some View {
+    HStack {
+      Text("New around here? ")
+      NavigationLink(destination: RegisterScreenView()) {
+        Text("Register")
+      }
+      .foregroundColor(Color("PrimaryColor"))
+    }
+    .padding()
   }
 }
 
