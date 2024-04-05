@@ -19,9 +19,11 @@ struct WelcomeScreenView: View {
       ZStack {
         Color("BgColor").edgesIgnoringSafeArea(.all)
         VStack {
-          Image(uiImage: #imageLiteral(resourceName: "onboard"))
+          Spacer()
+          lottiAnimateView
           Spacer()
           PrimaryButton(title: "Welcome To TweetSense", action: {})
+            .padding(.top, 20)
           navigationSignInView
           navigationRegisterView
           bottomView
@@ -29,6 +31,13 @@ struct WelcomeScreenView: View {
       }
       .padding()
     }
+  }
+  
+  private var lottiAnimateView: some View {
+    LottieView(name: "Welcome", loopMode: .loop)
+      .scaledToFit()
+      .frame(maxWidth: 200, maxHeight: 200)
+      .background(Color.white)
   }
   
   private var navigationSignInView: some View {

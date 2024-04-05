@@ -23,10 +23,17 @@
 		DEEB67F72BAB4D520052A0EC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DEEB67F62BAB4D520052A0EC /* FirebaseAuth */; };
 		DEEB67FB2BAB535B0052A0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = DEEB67FA2BAB535B0052A0EC /* SimpleToast */; };
 		DEF959792BBF197B00E5669A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DEF959782BBF197B00E5669A /* Lottie */; };
-		DEF9597B2BBF199000E5669A /* Animation - 1712251182704.json in Resources */ = {isa = PBXBuildFile; fileRef = DEF9597A2BBF199000E5669A /* Animation - 1712251182704.json */; };
 		DEF9597E2BBF19CC00E5669A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9597D2BBF19CC00E5669A /* LottieView.swift */; };
 		DEF959812BBF1F7B00E5669A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF959802BBF1F7B00E5669A /* HomeView.swift */; };
 		DEF959832BBF2E8100E5669A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF959822BBF2E8100E5669A /* HomeViewModel.swift */; };
+		DEF959882BBF8EC200E5669A /* TextSentinmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF959872BBF8EC200E5669A /* TextSentinmentView.swift */; };
+		DEF9598A2BBF93C700E5669A /* TextSentimentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF959892BBF93C700E5669A /* TextSentimentViewModel.swift */; };
+		DEF9598C2BBF9C3900E5669A /* NegativeEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = DEF9598B2BBF9C3900E5669A /* NegativeEmoji.json */; };
+		DEF959942BBFA35000E5669A /* PositiveEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = DEF959932BBFA35000E5669A /* PositiveEmoji.json */; };
+		DEF959962BBFA5B100E5669A /* Search.json in Resources */ = {isa = PBXBuildFile; fileRef = DEF959952BBFA5B100E5669A /* Search.json */; };
+		DEF959982BBFAA1900E5669A /* Welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = DEF959972BBFAA1800E5669A /* Welcome.json */; };
+		DEF9599A2BBFB4E500E5669A /* Animate OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF959992BBFB4E500E5669A /* Animate OverlayView.swift */; };
+		DEF9599C2BBFB78A00E5669A /* NeutralEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = DEF9599B2BBFB78900E5669A /* NeutralEmoji.json */; };
 		DEFEFB7E2BA064B100959061 /* TweetSenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFEFB7D2BA064B100959061 /* TweetSenseApp.swift */; };
 		DEFEFB822BA064B400959061 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = DEFEFB812BA064B400959061 /* Assets */; };
 		DEFEFB852BA064B400959061 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFEFB842BA064B400959061 /* Preview Assets.xcassets */; };
@@ -69,10 +76,17 @@
 		DE956EBD2BB5DB6D00BEF38F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DEEB67ED2BAB43970052A0EC /* RegisterScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenVM.swift; sourceTree = "<group>"; };
 		DEEB67F12BAB4C300052A0EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DEF9597A2BBF199000E5669A /* Animation - 1712251182704.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - 1712251182704.json"; sourceTree = "<group>"; };
 		DEF9597D2BBF19CC00E5669A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		DEF959802BBF1F7B00E5669A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DEF959822BBF2E8100E5669A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DEF959872BBF8EC200E5669A /* TextSentinmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSentinmentView.swift; sourceTree = "<group>"; };
+		DEF959892BBF93C700E5669A /* TextSentimentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSentimentViewModel.swift; sourceTree = "<group>"; };
+		DEF9598B2BBF9C3900E5669A /* NegativeEmoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NegativeEmoji.json; sourceTree = "<group>"; };
+		DEF959932BBFA35000E5669A /* PositiveEmoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PositiveEmoji.json; sourceTree = "<group>"; };
+		DEF959952BBFA5B100E5669A /* Search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Search.json; sourceTree = "<group>"; };
+		DEF959972BBFAA1800E5669A /* Welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Welcome.json; sourceTree = "<group>"; };
+		DEF959992BBFB4E500E5669A /* Animate OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animate OverlayView.swift"; sourceTree = "<group>"; };
+		DEF9599B2BBFB78900E5669A /* NeutralEmoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NeutralEmoji.json; sourceTree = "<group>"; };
 		DEFEFB7A2BA064B100959061 /* TweetSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFEFB7D2BA064B100959061 /* TweetSenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSenseApp.swift; sourceTree = "<group>"; };
 		DEFEFB812BA064B400959061 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
@@ -152,6 +166,7 @@
 				DEFEFBAB2BA074E900959061 /* Login */,
 				DEF9597F2BBF1F6200E5669A /* HomeView */,
 				DE956EB62BB5D81B00BEF38F /* TweetClassifier */,
+				DEF959862BBF8E8800E5669A /* TextSentimentView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +192,11 @@
 			isa = PBXGroup;
 			children = (
 				DEF9597D2BBF19CC00E5669A /* LottieView.swift */,
+				DEF959972BBFAA1800E5669A /* Welcome.json */,
+				DEF959952BBFA5B100E5669A /* Search.json */,
+				DEF959932BBFA35000E5669A /* PositiveEmoji.json */,
+				DEF9598B2BBF9C3900E5669A /* NegativeEmoji.json */,
+				DEF9599B2BBFB78900E5669A /* NeutralEmoji.json */,
 			);
 			path = "Lottie ";
 			sourceTree = "<group>";
@@ -188,6 +208,16 @@
 				DEF959822BBF2E8100E5669A /* HomeViewModel.swift */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		DEF959862BBF8E8800E5669A /* TextSentimentView */ = {
+			isa = PBXGroup;
+			children = (
+				DEF959872BBF8EC200E5669A /* TextSentinmentView.swift */,
+				DEF959892BBF93C700E5669A /* TextSentimentViewModel.swift */,
+				DEF959992BBFB4E500E5669A /* Animate OverlayView.swift */,
+			);
+			path = TextSentimentView;
 			sourceTree = "<group>";
 		};
 		DEFEFB712BA064B100959061 = {
@@ -214,7 +244,6 @@
 			isa = PBXGroup;
 			children = (
 				DE007A692BBB214E0032201A /* TweetSentimentClassifier.mlmodel */,
-				DEF9597A2BBF199000E5669A /* Animation - 1712251182704.json */,
 				DEFEFB7D2BA064B100959061 /* TweetSenseApp.swift */,
 				DE956EBD2BB5DB6D00BEF38F /* ContentView.swift */,
 				DE956EB92BB5D91100BEF38F /* Views */,
@@ -387,11 +416,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF959942BBFA35000E5669A /* PositiveEmoji.json in Resources */,
 				DEFEFB852BA064B400959061 /* Preview Assets.xcassets in Resources */,
+				DEF959982BBFAA1900E5669A /* Welcome.json in Resources */,
 				DE4571D62BB9923000FFFF93 /* apple.csv in Resources */,
+				DEF9598C2BBF9C3900E5669A /* NegativeEmoji.json in Resources */,
+				DEF959962BBFA5B100E5669A /* Search.json in Resources */,
 				DEFEFB822BA064B400959061 /* Assets in Resources */,
+				DEF9599C2BBFB78A00E5669A /* NeutralEmoji.json in Resources */,
 				DEEB67F22BAB4C300052A0EC /* GoogleService-Info.plist in Resources */,
-				DEF9597B2BBF199000E5669A /* Animation - 1712251182704.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,9 +456,12 @@
 				DE956EB42BB5A58900BEF38F /* SignInScreenVM.swift in Sources */,
 				DEFEFBA82BA0691D00959061 /* WelcomeScreenView.swift in Sources */,
 				DEF959812BBF1F7B00E5669A /* HomeView.swift in Sources */,
+				DEF9598A2BBF93C700E5669A /* TextSentimentViewModel.swift in Sources */,
 				DE4571DC2BB9ACD800FFFF93 /* SectorMarkView.swift in Sources */,
 				DE007A6A2BBB214E0032201A /* TweetSentimentClassifier.mlmodel in Sources */,
 				DEF9597E2BBF19CC00E5669A /* LottieView.swift in Sources */,
+				DEF959882BBF8EC200E5669A /* TextSentinmentView.swift in Sources */,
+				DEF9599A2BBFB4E500E5669A /* Animate OverlayView.swift in Sources */,
 				DE956EBC2BB5D94700BEF38F /* UserDefaults.swift in Sources */,
 				DE956EBE2BB5DB6D00BEF38F /* ContentView.swift in Sources */,
 				DE4571DE2BB9C28E00FFFF93 /* TweetClassifierViewModel.swift in Sources */,

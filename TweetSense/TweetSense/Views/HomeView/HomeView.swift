@@ -39,7 +39,7 @@ struct HomeView: View {
         CardView(color: .teal, imageName: "TweetClassifier", title: "Tweet Classifier")
       }
       
-      NavigationLink(destination: SecondDetailView()) {
+      NavigationLink(destination: TextSentinmentView()) {
         CardView(color: .pink.opacity(0.5), imageName: "Text Analysis", title: "Text Sentiment Analysis")
       }
       
@@ -98,12 +98,6 @@ struct CardView: View {
         }
           .padding()
       )
-  }
-}
-
-struct SecondDetailView: View {
-  var body: some View {
-    Text("Second Detail View")
   }
 }
 

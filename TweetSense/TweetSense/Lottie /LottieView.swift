@@ -9,19 +9,26 @@ import Lottie
 import SwiftUI
 
 struct LottieView: UIViewRepresentable {
+  
+  var name = "Welcome"
+  var loopMode: LottieLoopMode = .loop
+  
+  func makeUIView(context: Context) -> LottieAnimationView {
+    let view = LottieAnimationView(name: name, bundle: Bundle.main)
+    view.loopMode = loopMode
+    view.play()
     
-    var animationFileName: String
-    let loopMode: LottieLoopMode
-    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        
-    }
-    
-    func makeUIView(context: Context) -> Lottie.LottieAnimationView {
-        let animationView = LottieAnimationView(name: animationFileName)
-        animationView.loopMode = loopMode
-        animationView.play()
-        animationView.contentMode = .scaleAspectFill
-        return animationView
-    }
+    return view
+  }
+  
+  func updateUIView(_ uiView: UIViewType, context: Context) {}
+}
+
+struct LottieView_Previews: PreviewProvider {
+  static var previews: some View {
+    LottieView()
+      .scaledToFit()
+      .frame(maxWidth: 50, maxHeight: 50) //
+      .background(Color.white)
+  }
 }

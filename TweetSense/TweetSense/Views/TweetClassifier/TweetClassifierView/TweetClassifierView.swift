@@ -25,20 +25,31 @@ struct TweetClassifierView: View {
   
   private var mainView: some View {
     VStack {
-      searchBar
-        .padding()
+      textField
+        .frame(height: 40)
+        .padding(20)
       searchBtnClicked
+        .frame(maxHeight: .infinity)
       Spacer()
     }
   }
   
-  private var searchBar: some View {
+  private var textField: some View {
     HStack {
       TextField("Search", text: $viewModel.searchText)
-        .textFieldStyle(RoundedBorderTextFieldStyle())
+        .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 0))
+        .background(Color.white)
+        .foregroundColor(.black)
+        .cornerRadius(20)
+        .overlay(
+          RoundedRectangle(cornerRadius: 20)
+            .stroke(Color.blue, lineWidth: 1)
+        )
 //        .onChange(of: viewModel.searchText) { newValue in
 //          viewModel.isSearchButtonClicked = false
 //        }
+        .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 0))
+      
       Button(action: {
 //        viewModel.isSearchButtonClicked = true
         if !viewModel.searchText.isEmpty
@@ -46,8 +57,16 @@ struct TweetClassifierView: View {
           viewModel.classifyTweets()
         }
       }) {
-        Text("Sentiment")
-          .foregroundStyle(.selection)
+        Text("Search")
+          .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
+          .background(Color.white)
+          .foregroundColor(.blue)
+          .cornerRadius(20)
+          .overlay(
+            RoundedRectangle(cornerRadius: 20)
+              .stroke(Color.blue, lineWidth: 1)
+          )
+          .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 10))
       }
     }
   }
@@ -57,7 +76,7 @@ struct TweetClassifierView: View {
         && !viewModel.filteredTweets.isEmpty {
       AnyView(listView)
     } else {
-      AnyView(noDataView)
+      AnyView(lottiAnimateView)
     }
   }
   
@@ -91,18 +110,11 @@ struct TweetClassifierView: View {
   }
 
   
-  private var noDataView: some View {
-    VStack(spacing: 20) {
-      Spacer()
-      Image(uiImage: #imageLiteral(resourceName: "noData"))
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .frame(width: 75, height: 75) // Set a fixed size for the image
-      NoDataButton(title: "No Available Data")
-      Spacer()
-    }
-    .padding(20)
-    .cornerRadius(10)
+  private var lottiAnimateView: some View {
+    LottieView(name: "Search", loopMode: .loop)
+      .scaledToFit()
+      .frame(maxWidth: 200, maxHeight: 200)
+      .background(Color.white)
   }
 }
 
