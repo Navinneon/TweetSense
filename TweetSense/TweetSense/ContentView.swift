@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
   
   var body: some View {
-    if let token = DataManager.shared.getToken() {
+    if let _ = DataManager.shared.getToken() {
       HomeView()
     } else {
       WelcomeScreenView()

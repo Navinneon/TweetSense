@@ -39,6 +39,7 @@ class RegisterScreenVM: ObservableObject {
       Auth.auth().createUser(withEmail: email, password: password) { [self] authResult, error in
         if let error = error {
           toastMessage = "Error creating user: \(error.localizedDescription)"
+          showToast = true
           print(toastMessage)
         } else if let result = authResult {
           if let token = result.user.refreshToken {

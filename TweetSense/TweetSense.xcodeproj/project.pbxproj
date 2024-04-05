@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE007A682BBB16620032201A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE007A672BBB16620032201A /* HomeModel.swift */; };
+		DE007A682BBB16620032201A /* TweetClassifierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE007A672BBB16620032201A /* TweetClassifierModel.swift */; };
 		DE007A6A2BBB214E0032201A /* TweetSentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DE007A692BBB214E0032201A /* TweetSentimentClassifier.mlmodel */; };
 		DE4571D62BB9923000FFFF93 /* apple.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE4571D52BB9923000FFFF93 /* apple.csv */; };
 		DE4571D82BB9A64600FFFF93 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571D72BB9A64600FFFF93 /* BarChartView.swift */; };
 		DE4571DC2BB9ACD800FFFF93 /* SectorMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571DB2BB9ACD800FFFF93 /* SectorMarkView.swift */; };
-		DE4571DE2BB9C28E00FFFF93 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571DD2BB9C28E00FFFF93 /* HomeViewModel.swift */; };
+		DE4571DE2BB9C28E00FFFF93 /* TweetClassifierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4571DD2BB9C28E00FFFF93 /* TweetClassifierViewModel.swift */; };
 		DE956EB42BB5A58900BEF38F /* SignInScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE956EB32BB5A58900BEF38F /* SignInScreenVM.swift */; };
-		DE956EB82BB5D83D00BEF38F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE956EB72BB5D83D00BEF38F /* HomeView.swift */; };
+		DE956EB82BB5D83D00BEF38F /* TweetClassifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE956EB72BB5D83D00BEF38F /* TweetClassifierView.swift */; };
 		DE956EBC2BB5D94700BEF38F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE956EBB2BB5D94700BEF38F /* UserDefaults.swift */; };
 		DE956EBE2BB5DB6D00BEF38F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE956EBD2BB5DB6D00BEF38F /* ContentView.swift */; };
 		DEEB67EE2BAB43970052A0EC /* RegisterScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB67ED2BAB43970052A0EC /* RegisterScreenVM.swift */; };
@@ -22,6 +22,11 @@
 		DEEB67F52BAB4D520052A0EC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DEEB67F42BAB4D520052A0EC /* FirebaseAnalytics */; };
 		DEEB67F72BAB4D520052A0EC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DEEB67F62BAB4D520052A0EC /* FirebaseAuth */; };
 		DEEB67FB2BAB535B0052A0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = DEEB67FA2BAB535B0052A0EC /* SimpleToast */; };
+		DEF959792BBF197B00E5669A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DEF959782BBF197B00E5669A /* Lottie */; };
+		DEF9597B2BBF199000E5669A /* Animation - 1712251182704.json in Resources */ = {isa = PBXBuildFile; fileRef = DEF9597A2BBF199000E5669A /* Animation - 1712251182704.json */; };
+		DEF9597E2BBF19CC00E5669A /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF9597D2BBF19CC00E5669A /* LottieView.swift */; };
+		DEF959812BBF1F7B00E5669A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF959802BBF1F7B00E5669A /* HomeView.swift */; };
+		DEF959832BBF2E8100E5669A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF959822BBF2E8100E5669A /* HomeViewModel.swift */; };
 		DEFEFB7E2BA064B100959061 /* TweetSenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFEFB7D2BA064B100959061 /* TweetSenseApp.swift */; };
 		DEFEFB822BA064B400959061 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = DEFEFB812BA064B400959061 /* Assets */; };
 		DEFEFB852BA064B400959061 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEFEFB842BA064B400959061 /* Preview Assets.xcassets */; };
@@ -52,18 +57,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DE007A672BBB16620032201A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		DE007A672BBB16620032201A /* TweetClassifierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetClassifierModel.swift; sourceTree = "<group>"; };
 		DE007A692BBB214E0032201A /* TweetSentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TweetSentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		DE4571D52BB9923000FFFF93 /* apple.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = apple.csv; sourceTree = "<group>"; };
 		DE4571D72BB9A64600FFFF93 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		DE4571DB2BB9ACD800FFFF93 /* SectorMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorMarkView.swift; sourceTree = "<group>"; };
-		DE4571DD2BB9C28E00FFFF93 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DE4571DD2BB9C28E00FFFF93 /* TweetClassifierViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetClassifierViewModel.swift; sourceTree = "<group>"; };
 		DE956EB32BB5A58900BEF38F /* SignInScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreenVM.swift; sourceTree = "<group>"; };
-		DE956EB72BB5D83D00BEF38F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DE956EB72BB5D83D00BEF38F /* TweetClassifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetClassifierView.swift; sourceTree = "<group>"; };
 		DE956EBB2BB5D94700BEF38F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		DE956EBD2BB5DB6D00BEF38F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DEEB67ED2BAB43970052A0EC /* RegisterScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenVM.swift; sourceTree = "<group>"; };
 		DEEB67F12BAB4C300052A0EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DEF9597A2BBF199000E5669A /* Animation - 1712251182704.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - 1712251182704.json"; sourceTree = "<group>"; };
+		DEF9597D2BBF19CC00E5669A /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		DEF959802BBF1F7B00E5669A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DEF959822BBF2E8100E5669A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DEFEFB7A2BA064B100959061 /* TweetSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFEFB7D2BA064B100959061 /* TweetSenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetSenseApp.swift; sourceTree = "<group>"; };
 		DEFEFB812BA064B400959061 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
@@ -87,6 +96,7 @@
 				DEEB67F52BAB4D520052A0EC /* FirebaseAnalytics in Frameworks */,
 				DEEB67FB2BAB535B0052A0EC /* SimpleToast in Frameworks */,
 				DEEB67F72BAB4D520052A0EC /* FirebaseAuth in Frameworks */,
+				DEF959792BBF197B00E5669A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,14 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE4571E02BB9C2A900FFFF93 /* HomeView */ = {
+		DE4571E02BB9C2A900FFFF93 /* TweetClassifierView */ = {
 			isa = PBXGroup;
 			children = (
-				DE956EB72BB5D83D00BEF38F /* HomeView.swift */,
-				DE4571DD2BB9C28E00FFFF93 /* HomeViewModel.swift */,
-				DE007A672BBB16620032201A /* HomeModel.swift */,
+				DE956EB72BB5D83D00BEF38F /* TweetClassifierView.swift */,
+				DE4571DD2BB9C28E00FFFF93 /* TweetClassifierViewModel.swift */,
+				DE007A672BBB16620032201A /* TweetClassifierModel.swift */,
 			);
-			path = HomeView;
+			path = TweetClassifierView;
 			sourceTree = "<group>";
 		};
 		DE956EB52BB5CA1800BEF38F /* SignInView */ = {
@@ -126,21 +136,22 @@
 			path = SignInView;
 			sourceTree = "<group>";
 		};
-		DE956EB62BB5D81B00BEF38F /* Home */ = {
+		DE956EB62BB5D81B00BEF38F /* TweetClassifier */ = {
 			isa = PBXGroup;
 			children = (
-				DE4571E02BB9C2A900FFFF93 /* HomeView */,
+				DE4571E02BB9C2A900FFFF93 /* TweetClassifierView */,
 				DE4571D72BB9A64600FFFF93 /* BarChartView.swift */,
 				DE4571DB2BB9ACD800FFFF93 /* SectorMarkView.swift */,
 			);
-			path = Home;
+			path = TweetClassifier;
 			sourceTree = "<group>";
 		};
 		DE956EB92BB5D91100BEF38F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DEFEFBAB2BA074E900959061 /* Login */,
-				DE956EB62BB5D81B00BEF38F /* Home */,
+				DEF9597F2BBF1F6200E5669A /* HomeView */,
+				DE956EB62BB5D81B00BEF38F /* TweetClassifier */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +171,23 @@
 				DEEB67ED2BAB43970052A0EC /* RegisterScreenVM.swift */,
 			);
 			path = RegisterView;
+			sourceTree = "<group>";
+		};
+		DEF9597C2BBF19B400E5669A /* Lottie  */ = {
+			isa = PBXGroup;
+			children = (
+				DEF9597D2BBF19CC00E5669A /* LottieView.swift */,
+			);
+			path = "Lottie ";
+			sourceTree = "<group>";
+		};
+		DEF9597F2BBF1F6200E5669A /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				DEF959802BBF1F7B00E5669A /* HomeView.swift */,
+				DEF959822BBF2E8100E5669A /* HomeViewModel.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 		DEFEFB712BA064B100959061 = {
@@ -186,9 +214,11 @@
 			isa = PBXGroup;
 			children = (
 				DE007A692BBB214E0032201A /* TweetSentimentClassifier.mlmodel */,
+				DEF9597A2BBF199000E5669A /* Animation - 1712251182704.json */,
 				DEFEFB7D2BA064B100959061 /* TweetSenseApp.swift */,
 				DE956EBD2BB5DB6D00BEF38F /* ContentView.swift */,
 				DE956EB92BB5D91100BEF38F /* Views */,
+				DEF9597C2BBF19B400E5669A /* Lottie  */,
 				DEFEFBAC2BA074F100959061 /* Components */,
 				DE956EBA2BB5D92D00BEF38F /* UserDefaults */,
 				DEFEFB812BA064B400959061 /* Assets */,
@@ -262,6 +292,7 @@
 				DEEB67F42BAB4D520052A0EC /* FirebaseAnalytics */,
 				DEEB67F62BAB4D520052A0EC /* FirebaseAuth */,
 				DEEB67FA2BAB535B0052A0EC /* SimpleToast */,
+				DEF959782BBF197B00E5669A /* Lottie */,
 			);
 			productName = TweetSense;
 			productReference = DEFEFB7A2BA064B100959061 /* TweetSense.app */;
@@ -338,6 +369,7 @@
 			packageReferences = (
 				DEEB67F32BAB4D520052A0EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				DEEB67F92BAB535B0052A0EC /* XCRemoteSwiftPackageReference "SimpleToast" */,
+				DEF959772BBF197B00E5669A /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = DEFEFB7B2BA064B100959061 /* Products */;
 			projectDirPath = "";
@@ -359,6 +391,7 @@
 				DE4571D62BB9923000FFFF93 /* apple.csv in Resources */,
 				DEFEFB822BA064B400959061 /* Assets in Resources */,
 				DEEB67F22BAB4C300052A0EC /* GoogleService-Info.plist in Resources */,
+				DEF9597B2BBF199000E5669A /* Animation - 1712251182704.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,18 +416,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE956EB82BB5D83D00BEF38F /* HomeView.swift in Sources */,
+				DE956EB82BB5D83D00BEF38F /* TweetClassifierView.swift in Sources */,
+				DEF959832BBF2E8100E5669A /* HomeViewModel.swift in Sources */,
 				DEEB67EE2BAB43970052A0EC /* RegisterScreenVM.swift in Sources */,
 				DEFEFBAA2BA0695400959061 /* SignInScreenView.swift in Sources */,
 				DE956EB42BB5A58900BEF38F /* SignInScreenVM.swift in Sources */,
 				DEFEFBA82BA0691D00959061 /* WelcomeScreenView.swift in Sources */,
+				DEF959812BBF1F7B00E5669A /* HomeView.swift in Sources */,
 				DE4571DC2BB9ACD800FFFF93 /* SectorMarkView.swift in Sources */,
 				DE007A6A2BBB214E0032201A /* TweetSentimentClassifier.mlmodel in Sources */,
+				DEF9597E2BBF19CC00E5669A /* LottieView.swift in Sources */,
 				DE956EBC2BB5D94700BEF38F /* UserDefaults.swift in Sources */,
 				DE956EBE2BB5DB6D00BEF38F /* ContentView.swift in Sources */,
-				DE4571DE2BB9C28E00FFFF93 /* HomeViewModel.swift in Sources */,
+				DE4571DE2BB9C28E00FFFF93 /* TweetClassifierViewModel.swift in Sources */,
 				DEFEFB7E2BA064B100959061 /* TweetSenseApp.swift in Sources */,
-				DE007A682BBB16620032201A /* HomeModel.swift in Sources */,
+				DE007A682BBB16620032201A /* TweetClassifierModel.swift in Sources */,
 				DEFEFBAE2BA0756A00959061 /* ComponentViews.swift in Sources */,
 				DEFEFBB02BA0773800959061 /* RegisterScreenView.swift in Sources */,
 				DE4571D82BB9A64600FFFF93 /* BarChartView.swift in Sources */,
@@ -739,6 +775,14 @@
 				minimumVersion = 0.8.1;
 			};
 		};
+		DEF959772BBF197B00E5669A /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -756,6 +800,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DEEB67F92BAB535B0052A0EC /* XCRemoteSwiftPackageReference "SimpleToast" */;
 			productName = SimpleToast;
+		};
+		DEF959782BBF197B00E5669A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEF959772BBF197B00E5669A /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

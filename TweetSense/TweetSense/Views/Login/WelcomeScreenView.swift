@@ -11,6 +11,7 @@ struct WelcomeScreenView: View {
   
   var body: some View {
     mainView
+      .navigationBarHidden(true)
   }
   
   private var mainView: some View {

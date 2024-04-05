@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct TweetClassifierView: View {
   
-  @StateObject var viewModel: HomeViewModel
+  @StateObject var viewModel: TweetClassifierViewModel
   
   init() {
     _viewModel = .init(wrappedValue: .init())
@@ -36,13 +36,12 @@ struct HomeView: View {
     HStack {
       TextField("Search", text: $viewModel.searchText)
         .textFieldStyle(RoundedBorderTextFieldStyle())
-        .onChange(of: viewModel.searchText) { newValue in
-          viewModel.isSearchButtonClicked = false
-        }
+//        .onChange(of: viewModel.searchText) { newValue in
+//          viewModel.isSearchButtonClicked = false
+//        }
       Button(action: {
-        viewModel.isSearchButtonClicked = true
-        if viewModel.isSearchButtonClicked
-            && !viewModel.searchText.isEmpty
+//        viewModel.isSearchButtonClicked = true
+        if !viewModel.searchText.isEmpty
             && !viewModel.filteredTweets.isEmpty{
           viewModel.classifyTweets()
         }
@@ -54,8 +53,7 @@ struct HomeView: View {
   }
   
   private var searchBtnClicked: some View {
-    if viewModel.isSearchButtonClicked
-        && !viewModel.searchText.isEmpty
+    if !viewModel.searchText.isEmpty
         && !viewModel.filteredTweets.isEmpty {
       AnyView(listView)
     } else {
@@ -108,8 +106,8 @@ struct HomeView: View {
   }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct TweetClassifierView_Previews: PreviewProvider {
   static var previews: some View {
-    HomeView()
+    TweetClassifierView()
   }
 }

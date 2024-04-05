@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreML
 
-class HomeViewModel: ObservableObject {
+class TweetClassifierViewModel: ObservableObject {
   
   var tweets: [Tweet] = []
   @Published var searchText = ""

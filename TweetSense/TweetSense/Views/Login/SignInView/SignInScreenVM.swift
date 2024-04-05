@@ -36,6 +36,7 @@ class SignInScreenVM: ObservableObject {
       Auth.auth().signIn(withEmail: email, password: password) { [self] authResult, error in
         if let error = error {
           toastMessage = "Error creating user: \(error.localizedDescription)"
+          showToast = true
           print(toastMessage)
         } else if let result = authResult {
           toastMessage = "User signIn successfully"

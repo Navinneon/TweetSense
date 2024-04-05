@@ -11,7 +11,7 @@ import SimpleToast
 struct RegisterScreenView: View {
   
   @StateObject var viewModel: RegisterScreenVM
-  private let toastOptions = SimpleToastOptions(hideAfter: 3, modifierType: .scale)
+  private let toastOptions = SimpleToastOptions(hideAfter: 3, modifierType: .fade)
   
   init() {
     _viewModel = .init(wrappedValue: .init())

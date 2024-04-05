@@ -12,7 +12,7 @@ struct SignInScreenView: View {
   
   @StateObject var viewModel: SignInScreenVM
   
-  private let toastOptions = SimpleToastOptions(hideAfter: 3, modifierType: .scale)
+  private let toastOptions = SimpleToastOptions(hideAfter: 3, modifierType: .fade)
   
   init() {
     _viewModel = .init(wrappedValue: .init())

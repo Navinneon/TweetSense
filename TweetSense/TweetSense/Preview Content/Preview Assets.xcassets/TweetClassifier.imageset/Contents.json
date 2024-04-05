@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "work-hard-woman-doing-analytics-online.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "onboard.pdf",
+      "filename" : "work-hard-woman-doing-analytics-online 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "work-hard-woman-doing-analytics-online 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
