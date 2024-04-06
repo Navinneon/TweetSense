@@ -9,19 +9,19 @@ import SwiftUI
 import Charts
 
 struct BarChartView: View {
-    let data: [BarChartViewData]
-    
-    var body: some View {
-        Chart {
-            ForEach(data, id: \.sentiment) { point in
-                BarMark(x: .value("Sentiment", point.sentiment),
-                        y: .value("Count", point.count))
-                .foregroundStyle(point.color)
-            }
-        }
-        .aspectRatio(1, contentMode: .fit)
-        .padding()
+  let data: [BarChartViewData]
+  
+  var body: some View {
+    Chart {
+      ForEach(data, id: \.sentiment) { point in
+        BarMark(x: .value("Sentiment", point.sentiment),
+                y: .value("Count", point.count))
+        .foregroundStyle(point.color)
+      }
     }
+    .aspectRatio(1, contentMode: .fit)
+    .padding()
+  }
 }
 
 struct BarChartView_Previews: PreviewProvider {

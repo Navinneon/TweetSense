@@ -10,19 +10,19 @@ import Charts
 
 struct PieChartView: View {
   let data: [PieChartData]
-   
-    var body: some View {
-        Chart(data, id: \.sentiment) { data in
-            SectorMark(
-                angle: .value("Value", Double(data.count)),
-                innerRadius: .ratio(0.618),
-                outerRadius: .inset(10),
-                angularInset: 1
-            )
-            .cornerRadius(4)
-            .foregroundStyle(by: .value("Product category", data.sentiment))
-        }
+  
+  var body: some View {
+    Chart(data, id: \.sentiment) { data in
+      SectorMark(
+        angle: .value("Value", Double(data.count)),
+        innerRadius: .ratio(0.618),
+        outerRadius: .inset(10),
+        angularInset: 1
+      )
+      .cornerRadius(4)
+      .foregroundStyle(by: .value("Product category", data.sentiment))
     }
+  }
 }
 
 
