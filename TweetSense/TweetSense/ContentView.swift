@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-   
-    var body: some View {
-        WelcomeScreenView()
+  
+  var body: some View {
+    if let _ = DataManager.shared.getToken() {
+      HomeView()
+    } else {
+      WelcomeScreenView()
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }
-
